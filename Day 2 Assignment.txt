@@ -1,0 +1,161 @@
+Assignment 1: Pseudocode and Flowchart for Sorting Algorithm - Write pseudocode and create a flowchart for a bubble sort
+
+procedure bubblesort(A : list of sortable items)
+    n= length(A)
+    for i from 0 to n-1 do:
+       for j from 0 to n-i-1 do:
+              if A[j] > A[j+1] then :
+                  swap(A[j], A[j+1])
+               end if
+            end for
+          end for
+       end procedure
+
+
+Flowchart for Bubble Sort Algorithm: 
+
+start
+|
+|
+set n as the length of array
+|
+|
+for i from 0 to n-1 do
+     for j from 0 to n-i-1 do
+     |
+     |
+     if arr[j] > arr [j+1] then
+           swap arr[j] and arr[j+1]
+     End if
+
+     End For
+End for
+|
+|
+End
+
+Explanation:
+ Bubble sort repeatedly steps through the list , compares adjacent elemnets , and swaps them if they are in the wrong order.The pass through the list is repeatedv until the list is sorted. 
+
+Example:
+
+array[5,3,8,4,2]:
+
+1. [5,3,8,4,2] (original)
+2.[3,5,8,4,2](3 and 5 swapped)
+3.[3,5,4,8,2](8 and 4 swapped)
+4.[3,5,4,2,8](8 and 2 swapped)
+5.[3,4,5,2,8](5 and 2 swapped)
+6. [3,4,2,5,8](4 and 2 swapped)
+7. [3,2,4,5,8]( 4 and2 swapped)
+8. [2,3,4,5,8](3 and 2 swapped)
+
+the array is now sorted in ascendung order.
+
+
+
+
+
+Assignment 2 : Recursive Function and Efficiency Analysis - Write a recursive function pseudocode and calculate the nth Fibonacci number and use Big O notation to analyze its efficiency. Compare this with an iterative approach and discuss the pros and cons in terms of space and time complexity.
+
+
+Recursive Fibonacci Function Pseudocode:
+
+
+function recursiveFibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
+
+Time Complexity: The time complexity of the recursive Fibonacci function is exponential, specifically O(2^n). This is because each call branches into two more calls, leading to a binary tree of function calls. As a result, the number of function calls grows exponentially with the input value of n.
+
+Space Complexity: The space complexity of the recursive Fibonacci function is O(n). This is because the function calls are stored in the call stack, and the maximum depth of the call stack is proportional to the value of n. Therefore, the space required is linearly dependent on the input value of n.
+
+
+Iterative Fibonacci Function Pseudocode:
+
+function iterativeFibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        fib = [0, 1]
+        for i from 2 to n:
+            fib[i] = fib[i-1] + fib[i-2]
+        return fib[n]
+
+
+Time Complexity: The time complexity of the iterative Fibonacci function is O(n). This is because it iterates through the loop n times, each time performing constant time operations (assignment and addition).
+
+Space Complexity: The space complexity of the iterative Fibonacci function is O(n). This is because it requires an array of size n+1 to store the Fibonacci sequence values.
+
+
+
+
+
+Sure! Here's the pseudocode for a recursive function to calculate the nth Fibonacci number:
+
+Recursive Fibonacci Function Pseudocode:
+arduino
+Copy code
+function recursiveFibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
+Now, let's analyze the efficiency of this recursive approach using Big O notation:
+
+Time Complexity: The time complexity of the recursive Fibonacci function is exponential, specifically O(2^n). This is because each call branches into two more calls, leading to a binary tree of function calls. As a result, the number of function calls grows exponentially with the input value of n.
+
+Space Complexity: The space complexity of the recursive Fibonacci function is O(n). This is because the function calls are stored in the call stack, and the maximum depth of the call stack is proportional to the value of n. Therefore, the space required is linearly dependent on the input value of n.
+
+Now, let's compare this recursive approach with an iterative approach:
+
+Iterative Fibonacci Function Pseudocode:
+less
+Copy code
+function iterativeFibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        fib = [0, 1]
+        for i from 2 to n:
+            fib[i] = fib[i-1] + fib[i-2]
+        return fib[n]
+Comparison in terms of time and space complexity:
+
+Time Complexity: The time complexity of the iterative Fibonacci function is O(n). This is because it iterates through the loop n times, each time performing constant time operations (assignment and addition).
+
+Space Complexity: The space complexity of the iterative Fibonacci function is O(n). This is because it requires an array of size n+1 to store the Fibonacci sequence values.
+
+Pros and Cons:
+
+Recursive Approach:
+
+Pros:
+Simplicity: The recursive solution is often simpler and more intuitive.
+Cons:
+Exponential Time Complexity: The recursive solution has exponential time complexity, making it inefficient for large values of n.
+Higher Space Complexity: The recursive solution consumes more memory due to the function call stack.
+
+
+Iterative Approach:
+
+Pros:
+Linear Time Complexity: The iterative solution has linear time complexity, making it more efficient for large values of n.
+Lower Space Complexity: The iterative solution consumes less memory as it doesn't involve function call stack.
+Cons:
+More Complex: The iterative solution may be less intuitive for some programmers compared to the recursive solution.
+
+
+
+
+
+
+
+
+ 
+
+
+
+

@@ -1,0 +1,99 @@
+Assignment 1: Pseudocode Development - Task: Write a detailed pseudocode for a simple program that takes a number as input, calculates the square if it's even or the cube if it's odd, and then outputs the result. Incorporate conditional and looping constructs.
+
+
+1. Start
+2. Declare a variable 'number'
+3. Print "Enter a number:"
+4. Read the input from the user and store it in 'number'
+5. Declare a variable 'result'
+6. If 'number' modulo 2 equals 0 then
+    1. Set 'result' to 'number * number'
+    2. Print "The square of the number is: " and 'result'
+7. Else
+    1. Set 'result' to 'number * number * number
+    2. Print "The cube of the number is: " and 'result'
+8. End If
+9. Stop
+
+
+
+Assignment 2: Flowchart Creation - Design a flowchart that outlines the logic for a user login process. It should include conditional paths for successful and unsuccessful login attempts, and a loop that allows a user three attempts before locking the account.
+
+
+start
+|
+|
+Enter user credentials<-------- incorrect password
+                                    Try again
+                                        ^
+|                                       |
+|                                       |
+|                     No           No   |
+Is entered credentials ----------> if login credentials
+      correct?                            wrong == 3 
+|                                           |                                           
+|yes                                   yes  |
+|                                           |              
+|                                       Account blocked
+Login successful                         
+
+some symbols are used in flowcharts:
+
+1. start/End : oval shape used to indicate the start or end of a process
+2. process: Rectangle shape used to represent a task or action.
+3. Decision: Diamond shape used to represent represent a decision point, usually with yes/no or true/false outcomes.
+4. Input/output: parallelogram shape used to indicate input or output of data.
+5. connector: circle shapeused to connect different parts of a flowchart when the flow spans multiple pages.
+6. Flowline: Arrow or line used to show the direction of flow between symbols.
+
+
+
+Assignment -3 : Function Design and Modularization - Create a document that describes the design of two modular functions: one that returns the factorial of a number, and another that calculates the nth Fibonacci number. Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
+
+
+
+1. Factorial Function
+
+
+Pseudo code:
+
+function factorial(n)
+          if n equals 0
+               return 1
+else
+               return n*factorial(n-1)
+
+Explanation:
+
+This function calculates the factorial of a given number 'n'. It utilizes recursion to multiply 'n' by the factorial of 'n-1' until 'n' reachesv 0. This function followes modular design by calculating logic and factorial, it reusable and easy to understand.
+
+
+2. Fibonacci series 
+
+
+pseudo code:
+
+  function fibonaaci(n)
+       if n equals 0
+            return 0
+       else  if n equals 1
+
+            return 1
+       else
+            return fibonacci(n-1) + fibonacci(n-2)
+
+This  function calculates the nth fibonaaci number using recursion. where each number is the sum of two preceding ones, starts from 0 and 1. similar to the factorial function , it uses recursion to break down the problem into smaller subproblems.
+
+Modularity in Programming:
+
+modularity programming menas breaking down t=into smaller, independent, and reusable modules or functions. this approach code organisation,readability, and maintainability. By encapsulating specific tasks within functions, each function can be understood and modifiedindependently without affecting the rest of the program.
+
+
+Advantages of Modularity:
+
+1. Code Reusability: Modular functions can be reused in multiple parts of a program or in different programs altogether, reducing redundancy and promoting efficent use of code.
+
+2. Simplified Debugging: with modularization, debugging becomes easier as issues are isolated within specific functions, allowing developers to focus on one of the code at a time.
+
+3. scalability : modular code is easier to scakle and maintain as new features can be added or existing ones modified without impacting the entire codebase.
+
